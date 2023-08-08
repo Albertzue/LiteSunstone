@@ -1,3 +1,5 @@
+using System.Xml.Linq;
+
 namespace LiteSunstone.Domain.UnitTest
 {
     public class PatientTest
@@ -8,10 +10,16 @@ namespace LiteSunstone.Domain.UnitTest
             public void ReturnPatientWhenArguementIsRight()
             {
                 //arrange && act
-                var patient = new Patient("id","name",88);
+                var id = "id";
+                var name = "name";
+                var age = 88;
+                var patient = new Patient(id, name, age);
 
                 //assert
                 Assert.NotNull(patient);
+                Assert.Equal(patient.Id, id);
+                Assert.Equal(patient.Name, name);
+                Assert.Equal(patient.Age, age);
             }
         }
     }

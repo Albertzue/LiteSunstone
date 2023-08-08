@@ -47,4 +47,5 @@ jobs:
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"Albertzue_LiteSunstone" /o:"albertzhu" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
            dotnet restore
            dotnet build --no-restore
+           dotnet test --no-build --verbosity normal
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"

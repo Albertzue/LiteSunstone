@@ -16,7 +16,7 @@ namespace LiteSunstone.Domain.UnitTest
                 var patient = new Patient(id, name, age);
 
                 //assert
-                Assert.NotNull(patient);
+                Assert.NotNull(null);
                 Assert.Equal(patient.Id, id);
                 Assert.Equal(patient.Name, name);
                 Assert.Equal(patient.Age, age);

@@ -8,14 +8,10 @@ namespace LiteSunstone.Api.Controllers
     [Route("[controller]")]
     public class PatientController : ControllerBase
     {
-       
-
-        private readonly ILogger<PatientController> logger;
         private readonly DataInMemory dataInMemory;
 
-        public PatientController(ILogger<PatientController> logger, DataInMemory dataInMemory)
+        public PatientController(DataInMemory dataInMemory)
         {
-            this.logger = logger;
             this.dataInMemory = dataInMemory;
         }
 

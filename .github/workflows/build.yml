@@ -50,4 +50,12 @@ jobs:
            dotnet-coverage collect "dotnet test" -f xml -o "coverage.xml"
            $result = .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
            $result
+      - name: Result
+        if: ${{failure()}}
+        shell: bash
+        run: echo "failure"
+      - name: Result2
+        if: ${{ success() }}
+        shell: bash
+        run: echo "success"
           

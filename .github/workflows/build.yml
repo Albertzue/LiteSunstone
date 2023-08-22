@@ -73,8 +73,9 @@ jobs:
               dotnet build --no-incremental
               $test =dotnet test
              . .\.script\validTest.ps1
-
-              if(IsFailed -testInfo $test)
+              $isFail =  IsFailed -testInfo $test
+              echo $isFail
+              if([System.Convert]::ToBoolean($isFail))
               {
                 exit 1
               }

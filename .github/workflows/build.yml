@@ -12,7 +12,19 @@ jobs:
       steps:
         -
           name: Checkout
-          uses: actions/checkout@v3
+          uses: actions/checkout@v3.2.0
+        - name: Setup .NET Core
+          uses: actions/setup-dotnet@v1
+          with:
+            dotnet-version: 7.0.x
+    
+    # dotnet build and publish
+        - name: Build with dotnet
+          run: dotnet build --configuration Release
+          
+        - name: publish
+          shell: bash
+          run:  dotnet publish --no-build -o /LiteSunstone/publish
         -
           name: Login to Docker Hub
           uses: docker/login-action@v2
@@ -87,6 +99,4 @@ jobs:
 
              .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
       
-        - name: publish
-          shell: pwsh
-          run:  dotnet publish --no-build -o ./LiteSunstone/publish
+      

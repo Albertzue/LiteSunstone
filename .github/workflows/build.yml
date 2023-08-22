@@ -84,4 +84,4 @@ jobs:
       
         - name: publish
           shell: pwsh
-          run:  dotnet publish --no-build -o ./publish
+          run:  dotnet publish --no-build -o ./LiteSunstone/publish

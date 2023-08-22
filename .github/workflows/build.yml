@@ -20,7 +20,7 @@ jobs:
     
     # dotnet build and publish
         - name: Build with dotnet
-          run: dotnet build --configuration Release
+          run: dotnet build --configuration 
           
         - name: publish
           shell: bash

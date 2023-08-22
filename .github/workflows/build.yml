@@ -34,7 +34,7 @@ jobs:
             context: .
             file: ./LiteSunstone/Dockerfile
             push: true
-            tags: ${{ secrets.DOCKERHUB_USERNAME }}/clockbox:latest
+            tags: ${{ secrets.DOCKERHUB_USERNAME }}/litesunstone:latest
    BuildAnalyze:
       runs-on:  windows-latest
       steps:

@@ -23,7 +23,7 @@ jobs:
           run: dotnet build 
           
         - name: publish
-          run:  dotnet publish --no-build 
+          run:  dotnet publish --no-build -o /LiteSunstone/publish
         -
           name: Login to Docker Hub
           uses: docker/login-action@v2

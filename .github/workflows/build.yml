@@ -47,7 +47,7 @@ jobs:
         run: |
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"Albertzue_LiteSunstone" /o:"albertzhu" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.vscoveragexml.reportsPaths=coverage.xml
             $result =dotnet build --no-incremental
-            $result = $test[$test.Length-3].trim()[0]
+            $result = $result[$result.Length-3].trim()[0]
             if($result -ne 0)
             {
                exit 1

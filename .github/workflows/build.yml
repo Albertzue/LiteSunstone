@@ -26,7 +26,7 @@ jobs:
           shell: bash
           run: |  
                ls
-               ls /LiteSunstone/
+               ls /LiteSunstone
         -
           name: Build and push
           uses: docker/build-push-action@v4

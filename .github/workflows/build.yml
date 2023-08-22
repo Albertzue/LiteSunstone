@@ -21,9 +21,13 @@ jobs:
     # dotnet build and publish
         - name: Build with dotnet
           run: dotnet build 
-          
+        - name: GetInfo
+          shell: bash
+          run: |  
+               ls -l
+               ls LiteSunstone
         - name: publish
-          run:  dotnet publish --no-build -o /LiteSunstone/publish
+          run:  dotnet publish --no-build -o ./publish
         -
           name: Login to Docker Hub
           uses: docker/login-action@v2
@@ -33,11 +37,7 @@ jobs:
         -
           name: Set up Docker Buildx
           uses: docker/setup-buildx-action@v2
-        - name: GetInfo
-          shell: bash
-          run: |  
-               ls -l
-               ls LiteSunstone
+        
         -
           name: Build and push
           uses: docker/build-push-action@v4.1.1

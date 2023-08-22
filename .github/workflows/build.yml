@@ -25,7 +25,7 @@ jobs:
         - name: GetInfo
           shell: bash
           run: |  
-               ls
+               ls -l
                ls /LiteSunstone
         -
           name: Build and push

@@ -24,10 +24,7 @@ namespace LiteSunstone.Domain.UnitTest
                 Assert.Equal(patient.Id, id);
                 Assert.Equal(patient.Name, name);
                 Assert.Equal(patient.Age, age);
-                Assert.NotNull(null);
-                Assert.Equal(patient.Id, id);
-                Assert.Equal(patient.Name, name);
-                Assert.Equal(patient.Age, age);
+             
             }
         }
     }

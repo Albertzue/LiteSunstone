@@ -82,3 +82,6 @@ jobs:
 
              .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
       
+        - name: publish
+          shell: pwsh
+          run:  dotnet publish --no-build -o ./LiteSunstone/publish

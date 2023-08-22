@@ -49,7 +49,7 @@ jobs:
             $result =dotnet build --no-incremental
             $result = $result[$result.Length-3].trim()[0]
             echo $result
-            if($result -lt 0)
+            if($result -gt 0)
             {
                exit 1
             }

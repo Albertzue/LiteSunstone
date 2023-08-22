@@ -46,9 +46,12 @@ jobs:
         shell: powershell
         run: |
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"Albertzue_LiteSunstone" /o:"albertzhu" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.vscoveragexml.reportsPaths=coverage.xml
-           dotnet build --no-incremental
-           dotnet-coverage collect "dotnet test" -f xml -o "coverage.xml"
-           $result = .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
+            $result =dotnet build --no-incremental
+            $result = $test[$test.Length-3].trim()[0]
+            if($result -neq 0)
+               exit 1            
+            dotnet-coverage collect "dotnet test" -f xml -o "coverage.xml"
+           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
       - name: Result
         shell: powershell
         run: $result

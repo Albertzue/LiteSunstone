@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LiteSunstone.Domain", "Lite
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LiteSunstone.Persistance", "LiteSunstone.Persistance\LiteSunstone.Persistance.csproj", "{7EAE950E-6F60-48DA-A2AE-E849CB8C7A4D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiteSunstone.Persistance.UnitTest", "LiteSunstone.Persistance.UnitTest\LiteSunstone.Persistance.UnitTest.csproj", "{F5F4242A-D1EB-4724-88C4-8F283B648926}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LiteSunstone.Persistance.UnitTest", "LiteSunstone.Persistance.UnitTest\LiteSunstone.Persistance.UnitTest.csproj", "{F5F4242A-D1EB-4724-88C4-8F283B648926}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiteSunstone.Domain.UnitTest", "LiteSunstone.Domain.UnitTest\LiteSunstone.Domain.UnitTest.csproj", "{499CA5AF-4231-47F4-8C04-A9ACA67AD581}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LiteSunstone.Domain.UnitTest", "LiteSunstone.Domain.UnitTest\LiteSunstone.Domain.UnitTest.csproj", "{499CA5AF-4231-47F4-8C04-A9ACA67AD581}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiteSunstone.Data", "LiteSunstone.Data\LiteSunstone.Data.csproj", "{47FED4AF-C332-487A-A95B-3C20AA4D74EF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{499CA5AF-4231-47F4-8C04-A9ACA67AD581}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{499CA5AF-4231-47F4-8C04-A9ACA67AD581}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{499CA5AF-4231-47F4-8C04-A9ACA67AD581}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47FED4AF-C332-487A-A95B-3C20AA4D74EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47FED4AF-C332-487A-A95B-3C20AA4D74EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47FED4AF-C332-487A-A95B-3C20AA4D74EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47FED4AF-C332-487A-A95B-3C20AA4D74EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

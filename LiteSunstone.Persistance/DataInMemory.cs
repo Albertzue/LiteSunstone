@@ -8,9 +8,9 @@ namespace LiteSunstone.Persistance
         public DataInMemory()
         {
             patients = new List<Patient> {
-                new Patient("1","Lisa", 66),
-                 new Patient("1","Peter", 86),
-                  new Patient("1","Jack", 96),
+                new Patient("5","Lisa", 66),
+                 new Patient("6","Peter", 86),
+                  new Patient("7","Jack", 96),
                 };
         }
 

@@ -10,8 +10,8 @@ namespace LiteSunstone.Api.Controllers
     public class PatientController : ControllerBase
     {
         private readonly DataInMemory dataInMemory;
-        private readonly PatientService patientService;
-        public PatientController(DataInMemory dataInMemory, PatientService patientService)
+        private readonly IPatientService patientService;
+        public PatientController(DataInMemory dataInMemory, IPatientService patientService)
         {
             this.dataInMemory = dataInMemory;
             this.patientService = patientService;

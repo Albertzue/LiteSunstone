@@ -1,9 +1,10 @@
-﻿using LiteSunstone.Domain;
+﻿using LiteSunstone.Api.Services.Contractors;
+using LiteSunstone.Domain;
 using MongoDB.Driver;
 
 namespace LiteSunstone.Api.Services
 {
-    public class PatientService
+    public class PatientService: IPatientService
     {
         private readonly IMongoDatabase database;
         private readonly IMongoCollection<Patient> patientCollection;

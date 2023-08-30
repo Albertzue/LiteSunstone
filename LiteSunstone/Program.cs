@@ -26,7 +26,7 @@ namespace LiteSunstone.Api
             var client = new MongoClient(connectionstr);
             var dataBase = client.GetDatabase("litesunstonedb");
             builder.Services.AddSingleton<IMongoDatabase>(dataBase);
-            builder.Services.AddTransient<PatientService, PatientService>();
+            builder.Services.AddTransient<IPatientService, PatientService>();
            
             var app = builder.Build();
 

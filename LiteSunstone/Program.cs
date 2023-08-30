@@ -1,4 +1,8 @@
+using LiteSunstone.Api.Services;
+using LiteSunstone.Domain;
 using LiteSunstone.Persistance;
+using Microsoft.Extensions.DependencyInjection;
+using MongoDB.Driver;
 using System.Diagnostics.CodeAnalysis;
 
 namespace LiteSunstone.Api
@@ -17,6 +21,13 @@ namespace LiteSunstone.Api
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
             builder.Services.AddTransient<DataInMemory>();
+
+            var connectionstr = "mongodb://localhost:27017";
+            var client = new MongoClient(connectionstr);
+            var dataBase = client.GetDatabase("litesunstonedb");
+            builder.Services.AddSingleton<IMongoDatabase>(dataBase);
+            builder.Services.AddTransient<PatientService, PatientService>();
+           
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

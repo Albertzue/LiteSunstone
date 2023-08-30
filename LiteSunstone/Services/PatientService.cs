@@ -1,5 +1,4 @@
-﻿using LiteSunstone.Api.Services.Contractors;
-using LiteSunstone.Domain;
+﻿using LiteSunstone.Domain;
 using MongoDB.Driver;
 
 namespace LiteSunstone.Api.Services

@@ -5,10 +5,10 @@ namespace LiteSunstone.Api.Controllers
     [ApiController]
     public class HealthController : Controller
     {
-        [HttpGet("/health")]
+        [HttpGet("/healthz")]
         public IActionResult Health()
         {
-            return Ok();
+            return Ok("working");
         }
     }
 }

@@ -24,10 +24,31 @@ namespace LiteSunstone.Api.Controllers
         }
 
         [HttpPost("patient")]
-        public IActionResult AddPatient(Patient patient) 
+        public async Task<IActionResult> AddPatient(Patient patient) 
         {
-            patientService.AddPatient(patient);
-            return Ok();
+            try
+            {
+                await patientService.AddPatient(patient);
+                return Ok();
+            }
+            catch (ArgumentException ex)
+            { 
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpDelete("patient")]
+        public async Task<IActionResult> DeletePatient(string id)
+        {
+            try
+            {
+                await patientService.DeletePatient(id);
+                return Ok();
+            }
+            catch (ArgumentException ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
     }
 }

@@ -6,6 +6,8 @@ namespace LiteSunstone.Api.Services
     {
         public IEnumerable<Patient> GetPatients();
 
-        public  void AddPatient(Patient patient);
+        public  Task AddPatient(Patient patient);
+
+        public Task DeletePatient(string id);
     }
 }

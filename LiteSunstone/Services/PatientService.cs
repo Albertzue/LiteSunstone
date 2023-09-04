@@ -18,9 +18,27 @@ namespace LiteSunstone.Api.Services
             return patientCollection.Find<Patient>(_ => true).ToList();
         }
 
-        public async void AddPatient(Patient patient)
+        public Patient GetPatient(string id) 
         {
-            await patientCollection.InsertOneAsync(patient);
+            return patientCollection.Find<Patient>(d => d.Id == id).FirstOrDefault();
+        }
+
+        public async Task AddPatient(Patient patient)
+        {
+            var existPatient = GetPatient(patient.Id);
+            if (existPatient == null)
+            {
+                await patientCollection.InsertOneAsync(patient);
+            }
+            else
+            {
+                throw new ArgumentException("patientId existing");
+            }
+        }
+
+        public async Task DeletePatient(string id)
+        {
+            await patientCollection.DeleteOneAsync(d=>d.Id ==id);
         }
     }
 }

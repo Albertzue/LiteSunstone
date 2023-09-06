@@ -6,12 +6,10 @@ namespace LiteSunstone.Persistance
 {
     public  class DbFactory
     {
-        private string connectionString;
         private string databaseName;
         private MongoClient client;
         public DbFactory(string connectionString,string databaseName)
         { 
-            this.connectionString = connectionString;
             this.databaseName = databaseName;
             this.client = new MongoClient(connectionString);
         }

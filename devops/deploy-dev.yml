@@ -43,7 +43,7 @@ spec:
     image: zhuyunjie0207/litesunstone:latest
     env: 
       - name: DB_CONNECTION
-        value: "mongodb://10.106.249.113:27017"
+        value: "mongodb://10.101.219.165:27017"
     ports:
     - containerPort: 5000
 

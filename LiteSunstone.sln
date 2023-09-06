@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LiteSunstone.Persistance.Un
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LiteSunstone.Domain.UnitTest", "LiteSunstone.Domain.UnitTest\LiteSunstone.Domain.UnitTest.csproj", "{499CA5AF-4231-47F4-8C04-A9ACA67AD581}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiteSunstone.Data", "LiteSunstone.Data\LiteSunstone.Data.csproj", "{47FED4AF-C332-487A-A95B-3C20AA4D74EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LiteSunstone.Data", "LiteSunstone.Data\LiteSunstone.Data.csproj", "{47FED4AF-C332-487A-A95B-3C20AA4D74EF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Devops", "Devops", "{5323ED9A-2ED7-4469-A456-6A39FE8C2402}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -15,15 +15,15 @@ namespace LiteSunstone.Api
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-
+            var connectionString = Environment.GetEnvironmentVariable("DB_CONNECTION");
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
             builder.Services.AddTransient<DataInMemory>();
 
-            var connectionstr = "mongodb://localhost:27017";
-            var client = new MongoClient(connectionstr);
+            //var connectionstr = "mongodb://localhost:27017";
+            var client = new MongoClient(connectionString);
             var dataBase = client.GetDatabase("litesunstonedb");
             builder.Services.AddSingleton<IMongoDatabase>(dataBase);
             builder.Services.AddTransient<IPatientService, PatientService>();

@@ -3,9 +3,11 @@ using MongoDB.Driver.Core.Configuration;
 using MongoDB.Driver;
 using LiteSunstone.Domain;
 using MongoDB.Bson;
+using System.Diagnostics.CodeAnalysis;
 
 namespace LiteSunstone.Data
 {
+    [ExcludeFromCodeCoverage]
     internal class Program
     {
         static void Main(string[] args)
@@ -21,8 +23,7 @@ namespace LiteSunstone.Data
                 db.CreateCollection("patients");
                 collection = db.GetCollection<Patient>(collectionName);
             }
-            var patients = new DataInMemory().GetPatients();
-            collection.InsertMany(patients);  
+
         }
     }
 }
